@@ -1,13 +1,17 @@
 from flask import Blueprint, render_template, request
+from ..models.Blog import Blog
 
 bp = Blueprint('blog', __name__, template_folder='templates', url_prefix='/blog')
 
 @bp.route('/')
 def blog():
+    # List available catagories
+    # list available tags
     return render_template('blog_search.html')
 
 @bp.route('/<int:id>')
 def get_blog(id):
-    title = "Lorem ipsum dolor sit amet consectetur"
-    blog = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta debitis culpa facere reiciendis ex quia officiis esse assumenda recusandae maxime quasi, ea suscipit mollitia architecto voluptas saepe voluptatibus corporis inventore."
-    return render_template('blog.html', title=title, blog=blog)
+    blog_entry = Blog.query.get(id)
+    if blog_entry is None:
+        return render_template('blog.html',error_message="Blog not found")
+    return render_template('blog.html', title=blog_entry.title, blog=blog_entry.blog)

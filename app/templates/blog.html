@@ -5,7 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
-    <p> {{ blog }}</p>
+    {% if error_message %}
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+            <div class="alert alert-danger" role="alert" style="text-align: center; width: 50%; padding: 10px;">
+                {{ error_message }}
+            </div>
+        </div>
+    {% else %}
+        <h1>{{ title }}</h1>
+        <p> {{ blog }}</p>
+    {% endif %}
 {% endblock %}
-

@@ -1,3 +1,5 @@
 class Config:
-    SQLALCHEMY_DATABASE_URL='sqlite:///site.db'
+    ENV = 'development'
+    SQLALCHEMY_DATABASE_URI='sqlite:///site.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
