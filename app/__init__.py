@@ -35,8 +35,8 @@ def preload_database_with_test_data(app, db):
             data = json.load(file)
         
         for item in data:
-            # Assuming you have a model named `MyModel` and the JSON keys match the model's attributes
-            db_object = Blog(**item)
-            db.session.add(db_object)
-        
+            if not Blog.exists(item['title']):
+                db_object = Blog(**item)
+                db.session.add(db_object)
+            
         db.session.commit()

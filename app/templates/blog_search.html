@@ -1,11 +1,43 @@
 {% extends "base.html" %}
 
 {% block title %}
-    My Blog - Blog
+My Blog - Blog
 {% endblock %}
 
 {% block content %}
-    <h1>Blog</h1>
-    <p>This is the blog page content.</p>
-    <a href="/blog/2">Link</a>
+
+{% if categories %}
+<div class="container">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter by Category
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/blog" data-value="null">None</a></li>
+            {% for category in categories %}
+                <li class="list-group-item"><a href="/blog?category={{ category }}">{{ category|capitalize}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endif %}
+
+{% if blogs %}
+<div class="row  m-4">
+    {% for blog in blogs %}
+    <div class="col">
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><a href="/blog/{{ blog.id }}">{{ blog.title }}</a></h5>
+                <p class="card-text">{{ blog.blog|truncate(50, True, '') }}...</p>
+            </div>
+            <div class="card-footer text-body-secondary">
+                Last updated: {{ blog.updated_at}}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
 {% endblock %}

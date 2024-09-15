@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Sententia - Home
+Sententia
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid text-center">
+<div class="container-fluid">
     <div class="row  m-4">
-        <div class="col">
+        <div class="col text-center">
             <figure>
                 <blockquote class="blockquote">
-                  <p>A collection of generated and personal sententia about varoius topics.</p>
+                    <p>A collection of generated and personal sententia about varoius topics.</p>
                 </blockquote>
                 <figcaption class="blockquote-footer">
-                    Sententia: latin, noun: a way of thinking, view, opinion, judgement. 
+                    Sententia: latin, noun: a way of thinking, view, opinion, judgement.
                 </figcaption>
-              </figure>
+            </figure>
             <hr>
         </div>
     </div>
@@ -24,42 +24,49 @@
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-              <p>results shown on blog page</p>
+            </form>
             <hr>
         </div>
+    </div>
     <div class="row  m-4">
+        {% if search_results %}
+        <h2>Results</h2>
+
+        <hr>
+        {% endif %}
+    </div>
+    <div class="row m-4">
+        {% if latest_blogs %}
+        <h2>Most recent</h2>
+        {% for blog in latest_blogs %}
         <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="/blog/{{ blog.id }}" style="text-decoration: none;">
+                <div class="card m-2 bg-dark text-white" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ blog.title }}</h5>
+                        <p class="card-text">{{ blog.blog|truncate(50, True, '') }}...</p>
+                    </div>
+                    <div class="card-footer">
+                        Last updated: {{ blog.updated_at}}
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
+        <hr>
+        {% endif %}
+    </div>
+    <div class="row  m-4">
+        {% if most_popular %}
+        <h2>Most Popular</h2>
+        <hr>
+        {% endif %}
+    </div>
+    <div class="row  m-4">
+        {% if categories %}
+        <h2>By Category</h2>
+        <hr>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
-

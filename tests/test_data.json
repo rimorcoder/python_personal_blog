@@ -1,14 +1,182 @@
 [
     {
-        "title":"A'Lure'ing",
-        "blog":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
-        "tags": "test,fake_data",
-        "category":"fishing"
+        "author": "King Auther",
+        "title": "Fishing Tales",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fishing"
     },
     {
-        "title":"Space Time",
-        "blog":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
-        "tags": "test,fake_data",
-        "category":"scifi"
+        "author": "King Auther",
+        "title": "Deep Sea Adventures",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fishing"
+    },
+    {
+        "author": "King Auther",
+        "title": "River Fishing",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fishing"
+    },
+    {
+        "author": "King Auther",
+        "title": "Fishing Techniques",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fishing"
+    },
+    {
+        "author": "King Auther",
+        "title": "Fishing Gear",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fishing"
+    },
+    {
+        "author": "Mike the Ninja Turtle",
+        "title": "Galactic Wars",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "scifi"
+    },
+    {
+        "author": "Mike the Ninja Turtle",
+        "title": "Alien Invasion",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "scifi"
+    },
+    {
+        "author": "Mike the Ninja Turtle",
+        "title": "Time Travel",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "scifi"
+    },
+    {
+        "author": "Mike the Ninja Turtle",
+        "title": "Space Odyssey",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "scifi"
+    },
+    {
+        "author": "Mike the Ninja Turtle",
+        "title": "Future Worlds",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "scifi"
+    },
+    {
+        "author": "Jane Doe",
+        "title": "Baking Basics",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "cooking"
+    },
+    {
+        "author": "Jane Doe",
+        "title": "Gourmet Cooking",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "cooking"
+    },
+    {
+        "author": "Jane Doe",
+        "title": "Healthy Recipes",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "cooking"
+    },
+    {
+        "author": "Jane Doe",
+        "title": "Quick Meals",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "cooking"
+    },
+    {
+        "author": "Jane Doe",
+        "title": "Vegetarian Delights",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "cooking"
+    },
+    {
+        "author": "John Smith",
+        "title": "Plant Care",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "gardening"
+    },
+    {
+        "author": "John Smith",
+        "title": "Flower Gardening",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "gardening"
+    },
+    {
+        "author": "John Smith",
+        "title": "Vegetable Gardening",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "gardening"
+    },
+    {
+        "author": "John Smith",
+        "title": "Garden Design",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "gardening"
+    },
+    {
+        "author": "John Smith",
+        "title": "Organic Gardening",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "gardening"
+    },
+    {
+        "author": "Alice Wonderland",
+        "title": "Magical Realms",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fantasy"
+    },
+    {
+        "author": "Alice Wonderland",
+        "title": "Enchanted Forests",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fantasy"
+    },
+    {
+        "author": "Alice Wonderland",
+        "title": "Mystical Creatures",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fantasy"
+    },
+    {
+        "author": "Alice Wonderland",
+        "title": "Fantasy Worlds",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fantasy"
+    },
+    {
+        "author": "Alice Wonderland",
+        "title": "Magic Spells",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "fantasy"
+    },
+    {
+        "author": "Bob Builder",
+        "title": "Building Techniques",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "construction"
+    },
+    {
+        "author": "Bob Builder",
+        "title": "Construction Projects",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "construction"
+    },
+    {
+        "author": "Bob Builder",
+        "title": "Home Renovation",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "construction"
+    },
+    {
+        "author": "Bob Builder",
+        "title": "DIY Projects",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "construction"
+    },
+    {
+        "author": "Bob Builder",
+        "title": "Building Materials",
+        "blog": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic praesentium, adipisci nobis eius veniam libero excepturi laudantium nemo recusandae maxime nihil ducimus quae! Quo mollitia reiciendis reprehenderit consequatur alias?",
+        "category": "construction"
     }
 ]
