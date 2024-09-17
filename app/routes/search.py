@@ -8,7 +8,8 @@ def search():
     try:
         search = request.args.get('query')
         if search:
-             search_results = Blog.query.filter(Blog.title.ilike(f'%{search}%')).limit(5).all()
+             search_term = f"%{search}%"
+             search_results = Blog.query.filter(Blog.title.ilike(search_term)).limit(5).all()
         else:
             search_results = []
     except Exception as e:
