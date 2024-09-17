@@ -1,6 +1,6 @@
 from flask import Flask
 from .config import Config
-from .routes import blog, home
+from .routes import blog, home, search
 from flask_sqlalchemy import SQLAlchemy
 import json
 import os
@@ -18,6 +18,7 @@ def create_app():
     # load routes
     app.register_blueprint(home.bp)
     app.register_blueprint(blog.bp)
+    app.register_blueprint(search.bp)
 
     # preload database with fake test data. 
     if app.config['ENV'] == 'development':

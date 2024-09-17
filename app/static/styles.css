@@ -2,3 +2,84 @@ body {
     background-color: #343a40; /* Bootstrap dark color */
     color: white; /* Ensure text is readable */
 }
+
+/* Default link style */
+a {
+    color: #1a0dab; /* Default link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode link style */
+@media (prefers-color-scheme: dark) {
+    a {
+        color: #8ab4f8; /* Light blue color for dark mode */
+    }
+}
+
+/*Pop the card class when hovering over */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Blog post */
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto; /* Center the blog post on the page */
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    font-family: Arial, sans-serif; /* Clean and modern font */
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+.post-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text for title */
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #bbbbbb; /* Lighter gray for meta info */
+    margin-bottom: 20px;
+}
+
+.author {
+    margin-right: 10px;
+}
+
+.timestamp {
+    color: #888888; /* Darker gray for the timestamp */
+}
+
+.post-content {
+    font-size: 1.1em;
+    line-height: 1.6; /* Improves readability */
+    color: #cccccc; /* Light gray for content */
+}
+
+.post-content p {
+    margin-bottom: 1em; /* Space between paragraphs */
+}
+
+/* Optional: Add a slight hover effect to links if you use them */
+.post-content a {
+    color: #4da6ff; /* Light blue for links */
+    text-decoration: none;
+}
+
+.post-content a:hover {
+    text-decoration: underline;
+}
+
+
+.small-text {
+    font-size: 0.8em; /* Adjust the value as needed */
+}

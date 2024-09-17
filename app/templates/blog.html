@@ -13,19 +13,20 @@
         </div>
     {% else %}
     <div class="container-fluid  mt-4">
-        <div class="card text-bg-dark ">
-            <div class="card-body">
-                <h4 class="card-title">{{ title }}</h4>
-                <hr>
-                <h6 class="card-subtitle mb-2">By {{ author }} </h6>
-                
-                <p class="card-text text-break">{{ blog }}</p>
+        <div class="blog-post">
+            <h1 class="post-title">{{ title }}</h1>
+            <div class="post-meta">
+                <span class="author">By {{ author }}</span>
+                <span class="timestamp">Created: {{ created_at }}</span>
+                <span class="timestamp">Updated: {{ updated_at }}</span>
             </div>
-            <div class="card-footer">
-                <p class="card-text text-break">Created: {{ created_at }}</p> 
-                <p class="card-text text-break">Updated: {{ updated_at }}</p> 
+            <div class="post-content">
+                <p>
+                    {{ blog }}
+                </p>
             </div>
         </div>
+        
     </div>
     {% endif %}
 {% endblock %}

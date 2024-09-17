@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sententia
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    {% if search_results|count == 0 %}
+    <p>Nothing found, please try again.</p>
+    {% else %}
+        <h4>Results for "{{ search_query }}"</h4>
+        <div class="row m-4 justify-content-center align-items-center">
+            {% for blog in search_results %}
+            <div class="col-auto">
+                <a href="/blog/{{ blog.id }}" style="text-decoration: none;">
+                    <div class="card m-2 bg-dark text-white" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ blog.title }}</h5>
+                            <p class="card-text">{{ blog.blog|truncate(50, True, '') }}...</p>
+                        </div>
+                        <div class="card-footer">
+                            Last updated: {{ blog.updated_at }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

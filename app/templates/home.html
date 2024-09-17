@@ -6,66 +6,54 @@ Sententia
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row  m-4">
+    <div class="row m-4 pt-4">
         <div class="col text-center">
             <figure>
                 <blockquote class="blockquote">
-                    <p>A collection of generated and personal sententia about varoius topics.</p>
+                    <h1 class="display-4">A collection of <strong>sententia</strong> about
+                        various topics.</h1>
                 </blockquote>
                 <figcaption class="blockquote-footer">
-                    Sententia: latin, noun: a way of thinking, view, opinion, judgement.
+                    <strong>sententia:</strong> latin, noun: a way of thinking, view, opinion, or judgement.
                 </figcaption>
             </figure>
             <hr>
         </div>
     </div>
-    <div class="row  m-4">
-        <div class="col">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <hr>
-        </div>
-    </div>
-    <div class="row  m-4">
-        {% if search_results %}
-        <h2>Results</h2>
-
-        <hr>
-        {% endif %}
-    </div>
-    <div class="row m-4">
+    <div class="row m-4 justify-content-center align-items-center">
         {% if latest_blogs %}
         <h2>Most recent</h2>
         {% for blog in latest_blogs %}
-        <div class="col">
+        <div class="col-auto">
             <a href="/blog/{{ blog.id }}" style="text-decoration: none;">
                 <div class="card m-2 bg-dark text-white" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">{{ blog.title }}</h5>
                         <p class="card-text">{{ blog.blog|truncate(50, True, '') }}...</p>
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer small-text">
                         Last updated: {{ blog.updated_at}}
                     </div>
                 </div>
             </a>
         </div>
         {% endfor %}
-        <hr>
         {% endif %}
     </div>
-    <div class="row  m-4">
-        {% if most_popular %}
-        <h2>Most Popular</h2>
+    <div class="row m-4 justify-content-center align-items-center">
+        {% if latest_blogs_by_category %}
         <hr>
-        {% endif %}
-    </div>
-    <div class="row  m-4">
-        {% if categories %}
-        <h2>By Category</h2>
-        <hr>
+        <h2>Latest by Category</h2>
+        {% for category, blogs in latest_blogs_by_category.items() %}
+        <div class="col-auto">
+            <h2>{{ category|capitalize }}</h2>
+            <ul>
+                {% for blog in blogs %}
+                <li><a href="/blog/{{ blog.id }}">{{ blog.title|capitalize }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
         {% endif %}
     </div>
 </div>
