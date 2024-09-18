@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+    My Blog - Admin
+{% endblock %}
+
+{% block content %}
+
+{% if all_blogs %}
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th class="sortable" data-sort="title">Title</th>
+                <th class="sortable" data-sort="author">Author</th>
+                <th class="sortable" data-sort="created_at">Created</th>
+                <th class="sortable" data-sort="updated_at">Updated</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for blog in all_blogs %}
+                <tr>
+                    <td>{{ blog.title }}</td>
+                    <td>{{ blog.author }}</td>
+                    <td>{{ blog.created_at }}</td>
+                    <td>{{ blog.updated_at }}</td>
+                    <td><button type="button" class="btn btn-secondary">Update</button></td>
+                    <td><button type="button" class="btn btn-danger">Delete</button></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+         $(document).ready(function() {
+            $('.sortable').on('click', function() {
+                var table = $(this).parents('table').eq(0);
+                var rows = table.find('tbody tr').toArray().sort(comparer($(this).index()));
+                this.asc = !this.asc;
+                if (!this.asc) { rows = rows.reverse(); }
+                for (var i = 0; i < rows.length; i++) { table.append(rows[i]); }
+            });
+    
+            function comparer(index) {
+                return function(a, b) {
+                    var valA = getCellValue(a, index), valB = getCellValue(b, index);
+                    if ($.isNumeric(valA) && $.isNumeric(valB)) {
+                        return valA - valB;
+                    } else if (isValidDate(valA) && isValidDate(valB)) {
+                        return new Date(valA) - new Date(valB);
+                    } else {
+                        return valA.localeCompare(valB);
+                    }
+                };
+            }
+    
+            function getCellValue(row, index) {
+                return $(row).children('td').eq(index).text();
+            }
+
+            function isValidDate(dateString) {
+                var date = Date.parse(dateString);
+                return !isNaN(date);
+            }
+        });
+    </script>
+{% endif %}
+
+{% endblock %}

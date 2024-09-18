@@ -1,6 +1,5 @@
-from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime, timezone
-db = SQLAlchemy()
+from ..extensions import db
 
 class Blog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -14,3 +13,5 @@ class Blog(db.Model):
     @classmethod
     def exists(cls, title):
         return db.session.query(cls.id).filter_by(title=title).scalar() is not None
+    
+

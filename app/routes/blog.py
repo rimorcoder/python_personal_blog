@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 from ..models.Blog import Blog
+from flask_login import current_user
 
 bp = Blueprint('blog', __name__, template_folder='templates', url_prefix="/blog")
 
@@ -15,17 +16,18 @@ def blog():
     categories = Blog.query.with_entities(Blog.category).distinct().all()
     categories = [c[0] for c in categories]
     
-    return render_template('blog_search.html', categories=categories, blogs=blogs)
+    return render_template('blog_search.html', user_logged_in=current_user.is_authenticated, categories=categories, blogs=blogs)
 
 @bp.route('/<int:id>',  strict_slashes=False)
 def get_blog(id):
     blog_entry = Blog.query.get(id)
     if blog_entry is None:
-        return render_template('blog.html',error_message="Blog not found")
+        return render_template('blog.html',user_logged_in=current_user.is_authenticated,error_message="Blog not found")
     return render_template('blog.html', 
                            title=blog_entry.title,
                            author=blog_entry.author,
                            category=blog_entry.category, 
                            created_at=blog_entry.created_at,
                            updated_at=blog_entry.updated_at,
-                           blog=blog_entry.blog)
+                           blog=blog_entry.blog,
+                           user_logged_in=current_user.is_authenticated)

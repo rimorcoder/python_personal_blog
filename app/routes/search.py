@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 from ..models.Blog import Blog
+from flask_login import current_user
 
 bp = Blueprint('search', __name__, template_folder='templates', url_prefix="/search")
 
@@ -15,4 +16,4 @@ def search():
     except Exception as e:
         print(e)
     
-    return render_template('search.html', search_results=search_results, search_query=search)
+    return render_template('search.html', user_logged_in=current_user.is_authenticated, search_results=search_results, search_query=search)

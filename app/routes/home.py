@@ -1,5 +1,6 @@
 from collections import defaultdict
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template
+from flask_login import current_user
 from ..models.Blog import Blog
 
 bp = Blueprint('home', __name__, template_folder='templates')
@@ -20,4 +21,4 @@ def home():
         sorted_blogs = sorted(blogs, key=lambda x: x.updated_at, reverse=True)
         latest_blogs_by_category[category] = sorted_blogs[:5]
     
-    return render_template('home.html', latest_blogs=latest_blogs, latest_blogs_by_category=latest_blogs_by_category)
+    return render_template('home.html', user_logged_in=current_user.is_authenticated, latest_blogs=latest_blogs, latest_blogs_by_category=latest_blogs_by_category)

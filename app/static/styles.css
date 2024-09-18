@@ -21,7 +21,7 @@ a:hover {
 }
 
 /*Pop the card class when hovering over */
-.card:hover {
+.card:not(.no-hover):hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
@@ -79,7 +79,13 @@ a:hover {
     text-decoration: underline;
 }
 
-
+/* For dates */
 .small-text {
     font-size: 0.8em; /* Adjust the value as needed */
+}
+
+/* For table sort */
+.sortable:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
