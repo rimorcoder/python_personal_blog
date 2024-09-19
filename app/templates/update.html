@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sententia
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="POST" action="/admin/update/{{ blog_entry.id }}">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{ blog_entry.title }}">
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" class="form-control" id="author" name="author" value="{{ blog_entry.author }}">
+        </div>
+        <div class="form-group">
+            <label for="published_date">Category</label>
+            <input type="text" class="form-control" id="category" name="category" value="{{ blog_entry.category }}">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea class="form-control" id="blog" name="blog">{{ blog_entry.blog }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-warning">Update</button>
+    </form>
+</div>
+{% endblock %}
